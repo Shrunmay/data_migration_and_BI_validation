@@ -45,10 +45,9 @@ ENTERPRISE_DATA_MIGRATION/
 ## 🚀 How to Run Locally
 
 1. **Clone the repository:**
-   \`\`\`bash
-   git clone https://github.com/Shrunmay/data_migration_and_BI_validation.git
-   cd data_migration_and_BI_validation
-   \`\`\`
+```bash
+git clone https://github.com/Shrunmay/data_migration_and_BI_validation.git
+cd data_migration_and_BI_validation
 
 2. **Configure Cloud Credentials:**
    * Place your Google Cloud service account key in the root directory as `gcp_service_account.json`.
