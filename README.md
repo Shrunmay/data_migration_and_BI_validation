@@ -43,25 +43,28 @@ ENTERPRISE_DATA_MIGRATION/
 └── requirements.txt            # Python package dependencies
 
 ## 🚀 How to Run Locally
+Clone the repository:
 
-1. **Clone the repository:**
-```bash
-git clone https://github.com/Shrunmay/data_migration_and_BI_validation.git
+Bash
+git clone [https://github.com/Shrunmay/data_migration_and_BI_validation.git](https://github.com/Shrunmay/data_migration_and_BI_validation.git)
 cd data_migration_and_BI_validation
+Configure Cloud Credentials:
 
-2. **Configure Cloud Credentials:**
-   * Place your Google Cloud service account key in the root directory as `gcp_service_account.json`.
-   * Configure your `.env` file with the necessary Airflow variables.
+Place your Google Cloud service account key in the root directory as gcp_service_account.json.
 
-3. **Spin up the Docker Cluster:**
-   \`\`\`bash
-   docker-compose up -d --build
-   \`\`\`
+Configure your .env file with the necessary Airflow variables.
 
-4. **Trigger the Pipeline:**
-   * Navigate to `http://localhost:8080` to access the Airflow UI.
-   * Toggle the `enterprise_cloud_migration_pipeline` DAG to trigger the automated extraction, validation, loading, transformation, and ML scoring process.
+Spin up the Docker Cluster:
 
-## 👤 Author
-**Shrunmay Shivaji Shinde**  
-*Data Engineer / Analytics Professional*
+Bash
+docker-compose up -d --build
+Trigger the Pipeline:
+
+Navigate to http://localhost:8080 to access the Airflow UI.
+
+Toggle the enterprise_cloud_migration_pipeline DAG to trigger the automated extraction, validation, loading, transformation, and ML scoring process.
+
+👤 Author
+Shrunmay Shivaji Shinde
+
+Data Engineer / Analytics Professional
