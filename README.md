@@ -18,7 +18,7 @@ An end-to-end, containerized ELT pipeline designed to extract legacy ERP data, r
 
 ## 📂 Repository Structure
 
-\`\`\`text
+```text
 ENTERPRISE_DATA_MIGRATION/
 ├── config/                     # Configuration files for Airflow and database connections
 ├── dags/                       
@@ -41,7 +41,6 @@ ENTERPRISE_DATA_MIGRATION/
 ├── docker-compose.yaml         # Multi-container cluster configuration
 ├── Dockerfile                  # Custom Airflow image with dbt/GCP dependencies
 └── requirements.txt            # Python package dependencies
-\`\`\`
 
 ## 🚀 How to Run Locally
 
