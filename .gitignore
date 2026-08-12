@@ -1,0 +1,7 @@
+﻿gcp_service_account.json
+.env
+venv/
+logs/
+data/
+__pycache__/
+.dbt/

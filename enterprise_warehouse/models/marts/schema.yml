@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_sites
+    description: "Dimension table for construction and logistics sites."
+    columns:
+      - name: site_key
+        tests:
+          - unique
+          - not_null
+      - name: project_status
+        tests:
+          - accepted_values:
+              values: ['Active', 'Completed', 'Suspended']
+
+  - name: dim_suppliers
+    description: "Dimension table for equipment vendors."
+    columns:
+      - name: supplier_key
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_project_financials
+    description: "Central fact table tracking equipment logistics and financial health."
+    columns:
+      - name: financial_record_key
+        tests:
+          - unique
+          - not_null
+      - name: site_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_sites')
+              field: site_key
+      - name: supplier_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_suppliers')
+              field: supplier_key
+      - name: billed_amount
+        tests:
+          - not_null

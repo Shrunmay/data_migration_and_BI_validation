@@ -1,0 +1,12 @@
+enterprise_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: enterprise-migration-portfolio # Your GCP Project
+      dataset: analytics_dev                  # The target dataset dbt will create for the clean schema
+      threads: 4
+      keyfile: /opt/airflow/gcp_service_account.json   # Path to your downloaded JSON key
+      timeout_seconds: 300
+      location: US                            # Or your specific BigQuery region (e.g., northamerica-northeast1)
